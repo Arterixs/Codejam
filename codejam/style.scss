@@ -1,0 +1,30 @@
+@import "./scss/mixin.scss";
+@import "./scss/header.scss";
+@import "./scss/main.scss";
+@import "./scss/footer.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    @include font;
+    min-height: 100vh;
+    display: flex;
+    background-image: url("./assets/png/fon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.conteiner {
+    margin: auto;
+    max-width: 500px;
+    padding: 10px 10px 10px 10px;
+    @media (max-width: 500px) {
+        padding: 10px 5px 10px 5px;
+    }
+}
+

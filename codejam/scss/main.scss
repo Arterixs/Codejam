@@ -1,0 +1,161 @@
+@import "./animation.scss";
+
+.main {
+    margin-bottom: 10px;
+}
+
+.board-cont {
+    height: 480px;
+    max-width: 480px;
+    padding: 10px;
+    background-color: rgb(54 42 42);
+    border-radius: 5px;
+    position: relative;
+    @media (max-width: 500px) {
+        width: 308px;
+        height: 310px;
+        padding: 5px;
+        margin: 0 auto;
+    }
+}
+
+.board-wrap {
+    @include flex-cont;
+    align-items: center;
+    justify-content: left;
+    gap: 6px;
+    flex-wrap: wrap;
+    max-width: 460px;
+    height: 460px;
+    background-color: rgb(173 137 96);
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+    @media (max-width: 500px) {
+        width: 298px;
+        height: 298px;
+        border-radius: 5px;
+    }
+}
+
+.cell {
+    border-radius: 10px;
+    border: 1px solid #000;
+    @include flex-cont;
+    align-items: center;
+    cursor: pointer;
+    background: brown;
+    box-shadow: 0px 0px 3px 2px #000;
+    font-size: 28px;
+    color: #f7f7f7;
+    transition: all 0.8s linear;
+    outline: none;
+    &:hover {
+        background-color: #c32d29;
+    }
+}
+
+.null {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.four {
+    width: 106px;
+    height: 106px;
+    @media (max-width: 500px) {
+        width: 67px;
+        height: 65px;
+    }
+}
+
+.three {
+    width: 145px;
+    height: 145px;
+    @media (max-width: 500px) {
+        width: 92px;
+        height: 91px;
+    }
+}
+
+.five {
+    width: 85px;
+    height: 85px;
+    @media (max-width: 500px) {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+.six {
+    width: 70px;
+    height: 70px;
+    @media (max-width: 500px) {
+        width: 43px;
+        height: 43px;
+    }
+}
+
+.seven {
+    width: 59px;
+    height: 59px;
+    @media (max-width: 500px) {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+}
+
+.eight {
+    width: 51px;
+    height: 51px;
+    @media (max-width: 500px) {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+}
+
+.shadow {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #080808ed;
+    @include flex-cont;
+    align-items: center;
+    color: #cb7831;
+    font-size: 42px;
+    &__span {
+        font-size: 20px;
+        text-align: center;
+    }
+    &__pause {
+        font-size: 42px;
+    }
+}
+
+.shuffleStart {
+    width: 200px;
+    height: 100px;
+    font-size: 1.2rem;
+    border: 1px solid #00c5fd;
+    color: #b32a2a;
+    background: #030304;
+    &:hover {
+        background: #26263a;
+    }
+}
+
+.display {
+    display: none;
+}
+
+.pointer {
+    pointer-events: none;
+    filter: blur(1px);
+}
