@@ -1,0 +1,49 @@
+.footer {
+    &-cont {
+        @include flex-pos;
+        gap: 10px;
+    }
+}
+
+.frame-cont {
+    @include flex-cont;
+    gap: 10px;
+    font-size: 22px;
+    &__text {
+
+    }
+    &__size {
+        color: #7c0000
+    }
+}
+
+.outher-cont {
+    @include flex-cont;
+    gap: 10px;
+    font-size: 22px;
+    @media (max-width: 450px) {
+        font-size: 16px;
+    }
+    &__text {
+
+    }
+}
+
+.outher-link {
+    display: flex;
+    gap: 10px;
+    &__size {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #144874;
+        &:hover {
+            color: #dedfe5;
+            transition: all 0.3s ease;
+        }
+        &_active {
+            color: #7c0000;
+            pointer-events: none;
+        }
+    }
+}
+

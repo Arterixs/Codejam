@@ -1,0 +1,45 @@
+@keyframes move-up {
+    from {
+        margin-left: 0px;
+    }
+    to {
+        margin-left: 75px;
+    }
+}
+
+@keyframes move-down {
+    from {
+        left: -1188px
+    }
+    to {
+        left: -2376px
+    }
+}
+
+@keyframes move-left {
+    from {
+        margin-left: 73px;
+    }
+    to {
+        margin-left: 0px;
+    }
+}
+
+@keyframes move-right {
+    from {
+        margin-left: 0px;
+    }
+    to {
+        margin-left: 73px;
+    }
+}
+
+.animation-right {
+    animation-name: move-right;
+    animation-duration: 0.5s;
+}
+
+.animation-left {
+    animation-name: move-left;
+    animation-duration: 0.5s;
+}
